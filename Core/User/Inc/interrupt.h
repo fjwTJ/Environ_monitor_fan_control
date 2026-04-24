@@ -6,6 +6,6 @@
 extern uint8_t f_400ms;
 extern uint8_t f_300ms;
 
-void FMQ_CONTROL(void);
+void Fan_LED_CONTROL(void);
 
 #endif

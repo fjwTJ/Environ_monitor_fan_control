@@ -95,13 +95,23 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_GPIO_WritePin(GPIOB ,GPIO_PIN_12, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB ,GPIO_PIN_13, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA ,GPIO_PIN_0, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOA ,GPIO_PIN_1, GPIO_PIN_SET);
+  HAL_TIM_Base_Start_IT(&htim2);
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_4);
+	
+	OLED_INITSHOW();
+	OLED_CLS();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    DHT11();
+    OLED_READSHOW();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

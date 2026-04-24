@@ -63,26 +63,26 @@ void OLED_INMATIONSHOW(void)
 // OLED 实时数据页
 void OLED_READSHOW(void)
 {
-	OLED_ShowCN(32,0,10);
-	OLED_ShowCN(32+16,0,11);
-	OLED_ShowCN(32+16+16,0,12);
-	OLED_ShowCN(32+16+16+16,0,13);
+	// OLED_ShowCN(32,0,10);
+	// OLED_ShowCN(32+16,0,11);
+	// OLED_ShowCN(32+16+16,0,12);
+	// OLED_ShowCN(32+16+16+16,0,13);
 	
 	// 报警阈值
-	OLED_ShowCN(0,3,29);
-	OLED_ShowCN(16,3,30);
-	OLED_ShowCN(16+16,3,31);
-	OLED_ShowCN(16+16+16,3,32);
+	// OLED_ShowCN(0,3,29);
+	// OLED_ShowCN(16,3,30);
+	// OLED_ShowCN(16+16,3,31);
+	// OLED_ShowCN(16+16+16,3,32);
 	OLED_ShowChar(16+16+16+16,3,':',16);
-	OLED_ShowNum(16+16+16+16+8,3,00,2,16);
+	OLED_ShowNum(16+16+16+16+8,3,data[0],2,16);
 	
 	// 气体浓度
-	OLED_ShowCN(0,6,25);
-	OLED_ShowCN(16,6,26);
-	OLED_ShowCN(16+16,6,27);
-	OLED_ShowCN(16+16+16,6,28);
+	// OLED_ShowCN(0,6,25);
+	// OLED_ShowCN(16,6,26);
+	// OLED_ShowCN(16+16,6,27);
+	// OLED_ShowCN(16+16+16,6,28);
 	OLED_ShowChar(16+16+16+16,6,':',16);
-	OLED_ShowNum(16+16+16+16+8,6,00,2,16);
+	OLED_ShowNum(16+16+16+16+8,6,data[2],2,16);
 	
 }
 
