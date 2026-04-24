@@ -6,6 +6,6 @@
 void KeyScan(void);
 uint8_t GetKey(void);
 
-extern uint8_t Key_Data;
+extern volatile uint8_t Key_Data;
 
 #endif

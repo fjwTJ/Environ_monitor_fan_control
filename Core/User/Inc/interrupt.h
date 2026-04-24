@@ -3,9 +3,9 @@
 
 #include "all.h"
 
-extern uint8_t f_400ms;
-extern uint8_t f_300ms;
-
-void Fan_LED_CONTROL(void);
+extern volatile uint8_t f_20ms;
+extern volatile uint8_t f_300ms;
+extern volatile uint8_t f_400ms;
+extern volatile uint16_t fan_pwm_target;
 
 #endif

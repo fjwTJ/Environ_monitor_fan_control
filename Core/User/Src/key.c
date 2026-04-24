@@ -2,7 +2,7 @@
 #include "stm32f103xb.h"
 #include "stm32f1xx_hal_gpio.h"
 
-uint8_t Key_Data = 0;
+volatile uint8_t Key_Data = 0;
 
 void KeyScan(void)
 {

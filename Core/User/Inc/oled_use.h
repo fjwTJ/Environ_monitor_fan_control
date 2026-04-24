@@ -4,12 +4,10 @@
 #include "all.h"
 
 void OLED_INITSHOW(void);
-void OLED_INMATIONSHOW(void);
-void OLED_READSHOW(void);
-void OLED_SETSHOW(void);
-void OLED_SETSHOWMAX(void);
-void OLED_SETSHOWMIN(void);
-
-extern uint8_t threshold_value;
+void OLED_ClearScreen(void);
+void OLED_ShowMonitorPage(uint8_t temperature, uint8_t humidity, uint16_t dust_density,
+                          uint16_t dust_adc_raw, const char *air_text, uint8_t fan_on);
+void OLED_ShowTempSettingPage(uint8_t temp_threshold);
+void OLED_ShowDustSettingPage(uint16_t dust_threshold);
 
 #endif
